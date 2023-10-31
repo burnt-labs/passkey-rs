@@ -21,7 +21,7 @@ async-trait = "0.1"
 coset = "0.3"
 log = "0.4"
 mockall = { version = "0.11", optional = true }
-p256 = { version = "0.10", features = ["pem", "arithmetic", "jwk"] }
+p256 = { version = "0.11", features = ["pem", "arithmetic", "jwk"] }
 passkey-types = { path = "../passkey-types", version = "0.1.1" }
 rand = "0.8"
 tokio = { version = "1", features = ["sync"], optional = true }
@@ -30,4 +30,4 @@ tokio = { version = "1", features = ["sync"], optional = true }
 mockall = { version = "0.11" }
 tokio = { version = "1", features = ["sync", "macros", "rt"] }
 generic-array = { version = "0.14", default-features = false }
-signature = { version = ">= 1.3.1, <1.5", features = ["rand-preview"] }
+signature = { version = "= 1.6.4", features = ["rand-preview"] }
