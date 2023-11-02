@@ -115,6 +115,17 @@ where
             tld_provider: Box::new(public_suffix::DEFAULT_PROVIDER),
         }
     }
+
+    /// Create a `Client` with a given `Authenticator` that uses the default
+    /// TLD verifier provided by `[public_suffix]` and with `allows_insecure_localhost`
+    /// set to `true`.
+    pub fn new_with_allows_localhost(authenticator: Authenticator<S, U>) -> Self {
+        Self {
+            authenticator,
+            allows_insecure_localhost: true,
+            tld_provider: Box::new(public_suffix::DEFAULT_PROVIDER),
+        }
+    }
 }
 
 impl<S, U, P> Client<S, U, P>
